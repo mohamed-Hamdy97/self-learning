@@ -57,6 +57,7 @@
 		7272565C279B2B400053CDD6 /* HelloObjective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HelloObjective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72725660279B2B400053CDD6 /* HelloObjective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloObjective_CUITests.m; sourceTree = "<group>"; };
 		72725662279B2B400053CDD6 /* HelloObjective_CUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloObjective_CUITestsLaunchTests.m; sourceTree = "<group>"; };
+		728F433E27A0D125006690E2 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 				7253B238279B2F3900FD0191 /* Shape.h */,
 				7272564C279B2B400053CDD6 /* main.m */,
 				7253B239279B2FC000FD0191 /* Shape.m */,
+				728F433E27A0D125006690E2 /* Rectangle.h */,
 			);
 			path = "HelloObjective-C";
 			sourceTree = "<group>";

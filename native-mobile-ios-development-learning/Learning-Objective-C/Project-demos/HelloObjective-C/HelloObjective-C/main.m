@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Shape.h"
+#import "Rectangle.h"
 
 int main(int argc, char * argv[]) {
 
@@ -48,6 +49,11 @@ int main(int argc, char * argv[]) {
     printf("volume prop %d \n",shapObj.volume);
     printf("volume prop usning setter %d \n", var);
     
+    
+    /* appling on inherit and rectangle*/
+    Rectangle * Rec =[Rectangle new];
+    [Rec notInheretedMethod];
+    [Rec setWidth:3 andHeight:2];
     
     
     return 0;
