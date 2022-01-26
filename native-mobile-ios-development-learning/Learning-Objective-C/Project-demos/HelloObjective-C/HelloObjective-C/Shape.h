@@ -6,7 +6,12 @@
 @interface Shape : NSObject{
     int width;
     int height;
+    @public
+    int publicVar;
+    @private
+    int privateVar;
 }
+@property int volume;
 
 //interface method
 - (void) firstMethod ;
@@ -17,5 +22,10 @@
 // class method
 + (void) secondMethod;
 
+/* applied on accessors  */
+//getter method
++ (int) getStaticVar;
+//setter method: increment  the static variable staticvar
++ (void) incrementStaticVar;
 
 @end

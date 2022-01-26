@@ -10,12 +10,11 @@
 #import "Shape.h"
 
 int main(int argc, char * argv[]) {
-//    NSString * appDelegateClassName;
-//    @autoreleasepool {
-//        // Setup code that might create autoreleased objects goes here.
-//        appDelegateClassName = NSStringFromClass([AppDelegate class]);
-//    }
-    printf("hello");
+
+    
+    /*
+    //applied on making object from class  and  calling it//
+    printf("hello objective-c");
     Shape *obj1 = [[Shape alloc] init];
     Shape *obj2 = [Shape new];
     
@@ -24,8 +23,32 @@ int main(int argc, char * argv[]) {
     int result=[obj2 setWidth:10 andHeight:20];
     printf("%d\n",result);
     [Shape secondMethod];
+    */
+    
+    
+    // applied on calling static vriables
+    [Shape incrementStaticVar];
+    int var = [Shape getStaticVar];
+    
+    printf("staticVar %d \n",var);
+    
+    //accessing public variable
+    Shape *shapObj = [Shape new];
+    shapObj->publicVar=10;
+    //cannot access private or protected variable
+//    shapObj->width
+    
+    /* accessing property*/
+    //callig property using . operator
+    shapObj.volume=10;
+    //using setter and getter
+    [shapObj setVolume:30];
+    var=[shapObj volume];
+    
+    printf("volume prop %d \n",shapObj.volume);
+    printf("volume prop usning setter %d \n", var);
+    
     
     
     return 0;
-//    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
