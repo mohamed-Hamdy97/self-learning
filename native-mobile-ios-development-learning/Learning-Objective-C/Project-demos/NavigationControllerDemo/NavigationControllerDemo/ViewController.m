@@ -43,7 +43,20 @@
     
     //solution is to make string at second view and assign at vieewdidload of seconVC the user name which passed to second view to this string
     secondVc.userName = _myUserName.text;
+    secondVc.firstVC = self;
+    //confirm that firstVC is consird for this class
     
+    
+    
+}
+
+- (void)clear{
+    _myUserName.text=@"";
+    //at this step how to access clear method when i am at the second view
+    //solution at first to make refrence on first view. by make a property of type protocol cleartext
+    
+    //pop navigation
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

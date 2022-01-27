@@ -6,14 +6,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ClearText.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondViewController : UIViewController
 @property NSString *userName;
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
+//making property of type clearText protocol
+@property id<ClearText> firstVC;
+
+-(void) clear;
 
 @end
+
+
 
 
 NS_ASSUME_NONNULL_END

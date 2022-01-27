@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		721E682927A2D9D300415A2E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		721E682A27A2D9D300415A2E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		725F1DAE27A2ED7A0021C345 /* ClearText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClearText.h; sourceTree = "<group>"; };
 		7291C0C027A223B300CE2081 /* NavigationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7291C0C327A223B300CE2081 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7291C0C427A223B300CE2081 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 				7291C0D527A223B400CE2081 /* main.m */,
 				721E682927A2D9D300415A2E /* SecondViewController.h */,
 				721E682A27A2D9D300415A2E /* SecondViewController.m */,
+				725F1DAE27A2ED7A0021C345 /* ClearText.h */,
 			);
 			path = NavigationControllerDemo;
 			sourceTree = "<group>";

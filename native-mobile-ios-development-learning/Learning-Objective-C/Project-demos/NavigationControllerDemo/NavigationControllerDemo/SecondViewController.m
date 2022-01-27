@@ -20,9 +20,18 @@
     _myLabel.text= _userName;
     //or using appending method
     _myLabel.text= [@"Hello " stringByAppendingString:_userName];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(clear)];
+    
+    self.navigationItem.rightBarButtonItem=rightBtn;
+    
 }
 
 
-
+- (void)clear{
+    printf("clear pressed");
+    //access the clear method at first view
+    //but we must mention tht firstVc is for fisrt view by self keyword before navigate
+    [_firstVC clear];
+}
 
 @end
