@@ -8,6 +8,9 @@
 #import "HomeTableTableViewController.h"
 
 @interface HomeTableTableViewController ()
+//create props to make table dynamic
+@property NSMutableArray *male;
+@property NSMutableArray *female;
 
 @end
 
@@ -16,11 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //nil is for refrence male as object
+    _male=[NSMutableArray arrayWithObjects:@"mohamed",@"ahmed",@"mahmoud",nil];
+    _female=[NSMutableArray arrayWithObjects:@"alaa",@"esraa",@"hala",nil];
 }
 
 #pragma mark - Table view data source
@@ -36,10 +37,12 @@
 //#warning Incomplete implementation, return the number of rows
     switch (section) {
         case 0:
-            return  3;
+//            return  3;
+            return [_male count];
             break;
         case 1:
-            return  4;
+//            return  4;
+            return [_female count];
             break;
         default:
             return 0;
@@ -55,10 +58,10 @@
     // Configure the cell...
     switch (indexPath.section) {
         case 0:
-            cell.textLabel.text=@"mohamed";
+            cell.textLabel.text=[_male objectAtIndex:indexPath.row];
             break;
         case 1:
-            cell.textLabel.text=@"ahmed";
+            cell.textLabel.text=[_female objectAtIndex:indexPath.row];
             break;
         default:
             break;
