@@ -27,14 +27,25 @@
 
 //1- first method important at creating the table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+//#warning Incomplete implementation, return the number of sections
+    return 2;
 }
 
 //2-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 10;
+//#warning Incomplete implementation, return the number of rows
+    switch (section) {
+        case 0:
+            return  3;
+            break;
+        case 1:
+            return  4;
+            break;
+        default:
+            return 0;
+            break;
+    }
+//    return 10;
 }
 
 //3-
@@ -42,7 +53,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text=@"mohamed";
+    switch (indexPath.section) {
+        case 0:
+            cell.textLabel.text=@"mohamed";
+            break;
+        case 1:
+            cell.textLabel.text=@"ahmed";
+            break;
+        default:
+            break;
+    }
+    
+    
+//    cell.textLabel.text=@"mohamed";
     
     return cell;
 }
