@@ -14,6 +14,8 @@
 		72E46A3427A2F53000B07886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E46A3327A2F53000B07886 /* Assets.xcassets */; };
 		72E46A3727A2F53000B07886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E46A3527A2F53000B07886 /* LaunchScreen.storyboard */; };
 		72E46A3A27A2F53000B07886 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E46A3927A2F53000B07886 /* main.m */; };
+		72E46A4527A2FC2300B07886 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72E46A4427A2FC2300B07886 /* image.jpg */; };
+		72E46A4827A2FEDC00B07886 /* SecodTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E46A4727A2FEDC00B07886 /* SecodTabViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		72E46A3627A2F53000B07886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72E46A3827A2F53000B07886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E46A3927A2F53000B07886 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72E46A4427A2FC2300B07886 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../../../../../../../Downloads/image.jpg; sourceTree = "<group>"; };
+		72E46A4627A2FEDC00B07886 /* SecodTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecodTabViewController.h; sourceTree = "<group>"; };
+		72E46A4727A2FEDC00B07886 /* SecodTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecodTabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 		72E46A2627A2F52F00B07886 /* ToolBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				72E46A4427A2FC2300B07886 /* image.jpg */,
 				72E46A2727A2F52F00B07886 /* AppDelegate.h */,
 				72E46A2827A2F52F00B07886 /* AppDelegate.m */,
 				72E46A2A27A2F52F00B07886 /* SceneDelegate.h */,
@@ -72,6 +78,8 @@
 				72E46A3527A2F53000B07886 /* LaunchScreen.storyboard */,
 				72E46A3827A2F53000B07886 /* Info.plist */,
 				72E46A3927A2F53000B07886 /* main.m */,
+				72E46A4627A2FEDC00B07886 /* SecodTabViewController.h */,
+				72E46A4727A2FEDC00B07886 /* SecodTabViewController.m */,
 			);
 			path = ToolBarDemo;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 				72E46A3727A2F53000B07886 /* LaunchScreen.storyboard in Resources */,
 				72E46A3427A2F53000B07886 /* Assets.xcassets in Resources */,
 				72E46A3227A2F52F00B07886 /* Main.storyboard in Resources */,
+				72E46A4527A2FC2300B07886 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +159,7 @@
 				72E46A2927A2F52F00B07886 /* AppDelegate.m in Sources */,
 				72E46A3A27A2F53000B07886 /* main.m in Sources */,
 				72E46A2C27A2F52F00B07886 /* SceneDelegate.m in Sources */,
+				72E46A4827A2FEDC00B07886 /* SecodTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

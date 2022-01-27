@@ -19,8 +19,10 @@
 }
 
 
-- (IBAction)doAction2:(UIBarButtonItem *)sender {
+- (IBAction)showImage:(UIBarButtonItem *)sender {
     printf("actio1");
+    UIImage *myImage= [UIImage imageNamed:@"image.jpg"];
+    [_myImageView setImage:myImage];
 }
 
 - (IBAction)doAction1:(UIBarButtonItem *)sender {

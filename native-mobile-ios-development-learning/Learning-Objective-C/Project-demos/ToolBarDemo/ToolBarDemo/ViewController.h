@@ -9,7 +9,8 @@
 
 @interface ViewController : UIViewController
 - (IBAction)doAction1:(UIBarButtonItem *)sender;
-- (IBAction)doAction2:(UIBarButtonItem *)sender;
+- (IBAction)showImage:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 
 
 @end
