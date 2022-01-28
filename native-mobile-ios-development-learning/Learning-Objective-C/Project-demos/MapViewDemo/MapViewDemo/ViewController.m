@@ -19,6 +19,17 @@
     [_myMap setZoomEnabled:NO];
     [_myMap setDelegate:self];
     
+    //set cclocationmanager accuracy
+    [_LocationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [_LocationManager setDistanceFilter:kCLHeadingFilterNone];
+    //for implement deleget here
+    [_LocationManager setDelegate:self];
+    
+    [_LocationManager startUpdatingLocation];
+    //we must access authorization
+    [_LocationManager requestAlwaysAuthorization]; 
+    
+    
     
 }
 
@@ -52,4 +63,15 @@
     //there is callback method called if we click on annotain
     
 }
+
+/* locatin manager delegate*/
+//depricated
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    printf("location updated");
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    printf("location updated");
+    
+}
+
 @end
