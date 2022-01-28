@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *myTextView;
 
 - (IBAction)doSyncAction:(UIButton *)sender;
