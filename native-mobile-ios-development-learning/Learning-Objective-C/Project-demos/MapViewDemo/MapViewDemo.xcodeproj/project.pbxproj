@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7206074627A435C5002E7628 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7206074527A435C5002E7628 /* MyAnnotation.m */; };
 		7271119327A42CAE0027EBBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271119227A42CAE0027EBBB /* AppDelegate.m */; };
 		7271119627A42CAE0027EBBB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271119527A42CAE0027EBBB /* SceneDelegate.m */; };
 		7271119927A42CAE0027EBBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271119827A42CAE0027EBBB /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7206074427A435C5002E7628 /* MyAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		7206074527A435C5002E7628 /* MyAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		7271118E27A42CAE0027EBBB /* MapViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7271119127A42CAE0027EBBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7271119227A42CAE0027EBBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				7271119F27A42CAF0027EBBB /* LaunchScreen.storyboard */,
 				727111A227A42CAF0027EBBB /* Info.plist */,
 				727111A327A42CAF0027EBBB /* main.m */,
+				7206074427A435C5002E7628 /* MyAnnotation.h */,
+				7206074527A435C5002E7628 /* MyAnnotation.m */,
 			);
 			path = MapViewDemo;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7271119927A42CAE0027EBBB /* ViewController.m in Sources */,
+				7206074627A435C5002E7628 /* MyAnnotation.m in Sources */,
 				7271119327A42CAE0027EBBB /* AppDelegate.m in Sources */,
 				727111A427A42CAF0027EBBB /* main.m in Sources */,
 				7271119627A42CAE0027EBBB /* SceneDelegate.m in Sources */,
