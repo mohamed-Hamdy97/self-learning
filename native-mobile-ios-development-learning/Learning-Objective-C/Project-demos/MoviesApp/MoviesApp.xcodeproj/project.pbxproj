@@ -13,8 +13,8 @@
 		720701B427A45AB600F8B956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720701B327A45AB600F8B956 /* Assets.xcassets */; };
 		720701B727A45AB600F8B956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720701B527A45AB600F8B956 /* LaunchScreen.storyboard */; };
 		720701BA27A45AB600F8B956 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 720701B927A45AB600F8B956 /* main.m */; };
-		72F8C25C27A45D3C00FDCC59 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8C25B27A45D3C00FDCC59 /* HomeViewController.m */; };
-		72F8C26027A45DCD00FDCC59 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8C25F27A45DCD00FDCC59 /* DetailsViewController.m */; };
+		72BCD6AA27A4668D00A3DBB0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD6A927A4668D00A3DBB0 /* HomeViewController.m */; };
+		72BCD6AD27A4686D00A3DBB0 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD6AC27A4686D00A3DBB0 /* DetailsViewController.m */; };
 		72F8C26627A45E7700FDCC59 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8C26527A45E7700FDCC59 /* Movie.m */; };
 		72F8C26D27A4600000FDCC59 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8C26C27A4600000FDCC59 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
@@ -30,10 +30,10 @@
 		720701B627A45AB600F8B956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720701B827A45AB600F8B956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		720701B927A45AB600F8B956 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		72F8C25A27A45D3C00FDCC59 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		72F8C25B27A45D3C00FDCC59 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		72F8C25E27A45DCD00FDCC59 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		72F8C25F27A45DCD00FDCC59 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		72BCD6A827A4668D00A3DBB0 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../../HomeViewController.h; sourceTree = "<group>"; };
+		72BCD6A927A4668D00A3DBB0 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../../HomeViewController.m; sourceTree = "<group>"; };
+		72BCD6AB27A4686D00A3DBB0 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../../DetailsViewController.h; sourceTree = "<group>"; };
+		72BCD6AC27A4686D00A3DBB0 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../../DetailsViewController.m; sourceTree = "<group>"; };
 		72F8C26427A45E7700FDCC59 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		72F8C26527A45E7700FDCC59 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		72F8C26B27A4600000FDCC59 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		72F8C25D27A45D4A00FDCC59 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				72F8C25A27A45D3C00FDCC59 /* HomeViewController.h */,
-				72F8C25B27A45D3C00FDCC59 /* HomeViewController.m */,
+				72BCD6A827A4668D00A3DBB0 /* HomeViewController.h */,
+				72BCD6A927A4668D00A3DBB0 /* HomeViewController.m */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -98,8 +98,8 @@
 		72F8C26127A45DD800FDCC59 /* DetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				72F8C25E27A45DCD00FDCC59 /* DetailsViewController.h */,
-				72F8C25F27A45DCD00FDCC59 /* DetailsViewController.m */,
+				72BCD6AB27A4686D00A3DBB0 /* DetailsViewController.h */,
+				72BCD6AC27A4686D00A3DBB0 /* DetailsViewController.m */,
 			);
 			path = DetailsViewController;
 			sourceTree = "<group>";
@@ -212,10 +212,10 @@
 				72F8C26627A45E7700FDCC59 /* Movie.m in Sources */,
 				72F8C26D27A4600000FDCC59 /* NetworkManager.m in Sources */,
 				720701A927A45AB500F8B956 /* AppDelegate.m in Sources */,
-				72F8C26027A45DCD00FDCC59 /* DetailsViewController.m in Sources */,
 				720701BA27A45AB600F8B956 /* main.m in Sources */,
-				72F8C25C27A45D3C00FDCC59 /* HomeViewController.m in Sources */,
 				720701AC27A45AB500F8B956 /* SceneDelegate.m in Sources */,
+				72BCD6AA27A4668D00A3DBB0 /* HomeViewController.m in Sources */,
+				72BCD6AD27A4686D00A3DBB0 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property NSMutableData *MyData;
 
 @end
 
@@ -16,9 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _MyData=[NSMutableData new];
 }
 
-
+// sync action
 - (IBAction)doAsyncAction:(UIButton *)sender {
     //for making sync request that will pause the executionof any evens at screen
     NSString *str =@"https://maktoob.yahoo.com/?p=us";
@@ -28,6 +30,7 @@
 
 }
 
+//Async action
 - (IBAction)doSyncAction:(UIButton *)sender {
     //for making async request that will pause the executionof any evens at screen
     //1-
@@ -40,6 +43,7 @@
     //4-start connection
     [con start];
     //the connectin will start but we can recisve data by the delegate didRecieveData
+    
 }
 
 //5
@@ -50,8 +54,12 @@
 //    _myTextView.text=strData;
     
     //so we will create an array and append all data and after finished by using delegete of finishloadingConnection we will view data
+    [_MyData appendData:data];
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     //append data here
+    printf("finished ");
+    NSString *str= [[NSString alloc]initWithData:_MyData encoding:NSUTF8StringEncoding ];
+    _myTextView.text=str;
 }
 @end

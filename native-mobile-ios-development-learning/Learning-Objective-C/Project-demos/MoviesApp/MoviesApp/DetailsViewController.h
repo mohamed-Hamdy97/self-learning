@@ -1,18 +1,15 @@
 //
-//  NetworkManager.h
+//  DetailsViewController.h
 //  MoviesApp
 //
 //  Created by mohamed Elnagar on 28/01/2022.
 //
 
-
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NetworkManager : NSObject
-
--(void) getAllMovies: (UIViewController*) delegate;
+@interface DetailsViewController : UIViewController
 
 @end
 
