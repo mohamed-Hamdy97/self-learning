@@ -1,6 +1,7 @@
 
 
 #import "HomeViewController.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface HomeViewController ()
 
@@ -67,7 +68,19 @@
     
     cell.textLabel.text=[currentDic objectForKey:@"title"];
     
+    /* assign image */
+    NSString *imageURL = [currentDic objectForKey:@"poster_path"];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageURL]placeholderImage:[UIImage imageNamed:@"placeholder-image.png"]];
+    cell.imageView.layer.cornerRadius=28;
+    //to make image be
+    cell.imageView.layer.masksToBounds=true;
+    
     return cell;
+}
+
+//height for the row of table view
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
 
 
