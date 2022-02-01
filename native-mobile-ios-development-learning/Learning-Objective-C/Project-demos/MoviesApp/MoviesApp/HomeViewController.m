@@ -2,6 +2,8 @@
 
 #import "HomeViewController.h"
 #import <SDWebImage/SDWebImage.h>
+#import "Model/Movie.h"
+#import "DetailsViewController.h"
 
 @interface HomeViewController ()
 
@@ -69,9 +71,13 @@
     cell.textLabel.text=[currentDic objectForKey:@"title"];
     
     /* assign image */
-    NSString *imageURL = [currentDic objectForKey:@"poster_path"];
+    NSString *imagePath = [currentDic objectForKey:@"poster_path"];
+    //concatentae with https://image.tmdb.org/t/p/w500
+    NSString *imageURL = [NSString stringWithFormat:@"%@/%@",@"https://image.tmdb.org/t/p/w500",imagePath];
+    NSLog(@"image---%@", imageURL);
+    
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageURL]placeholderImage:[UIImage imageNamed:@"placeholder-image.png"]];
-    cell.imageView.layer.cornerRadius=28;
+    cell.imageView.layer.cornerRadius=25;
     //to make image be
     cell.imageView.layer.masksToBounds=true;
     
@@ -83,49 +89,41 @@
     return 50;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     NSLog(@"Source Controller = %@", [segue sourceViewController]);
+     NSLog(@"Destination Controller = %@", [segue destinationViewController]);
+     NSLog(@"Segue Identifier = %@", [segue identifier]);
+     NSDictionary *selectedCell = _myMovies[self.tableView.indexPathForSelectedRow.row];
+    Movie *movie = [Movie new];
+    movie.title =[selectedCell objectForKey:@"title"];
+    
+    /* assign image */
+    NSString *imagePath = [selectedCell objectForKey:@"poster_path"];
+    //concatentae with https://image.tmdb.org/t/p/w500
+    NSString *imageURL = [NSString stringWithFormat:@"%@/%@",@"https://image.tmdb.org/t/p/w500",imagePath];
+    
+    movie.image = imageURL;
+    movie.rating =[[selectedCell objectForKey:@"vote_average"] doubleValue];
+    movie.releasedate =[selectedCell objectForKey:@"release_date"];
+    //genre will array of ids so we will search on api about genreand filter.
+    movie.genre=[selectedCell objectForKey:@"genre_ids"];
+    
+    //assign the movie at the home to the movie of details
+    // but the problem cann't accessing the movie of details
+    // segue.destinationViewController.movie=movie
+    //solution is casting to the view of details
+    
+    //we should inherite the detaiols first to can access myMovie.
+    ((DetailsViewController*)segue.destinationViewController).myMovie = movie;
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    DetailsViewController *detObj = [DetailsViewController new];
+    detObj.isSomethingEnabled=YES;
+    
+    if([segue.identifier isEqualToString:@"mySegue"]){
+        DetailsViewController *controller=(DetailsViewController*)segue.destinationViewController;
+        controller.isSomethingEnabled = YES;
+         }
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

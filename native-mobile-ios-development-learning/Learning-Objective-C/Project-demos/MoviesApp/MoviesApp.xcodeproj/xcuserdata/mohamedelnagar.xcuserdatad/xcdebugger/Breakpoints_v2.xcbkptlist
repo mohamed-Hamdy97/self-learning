@@ -14,8 +14,8 @@
             filePath = "MoviesApp/HomeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "HomeViewController()"
             landmarkType = "2">
          </BreakpointContent>

@@ -7,10 +7,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Services/Networking/NetworkManager.h"
+#import "Model/Movie.h"
+#import "DetailsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
+
+//for inheret details obj
 
 @property NSMutableArray *myMovies;
 @property NSMutableData *responseData;
