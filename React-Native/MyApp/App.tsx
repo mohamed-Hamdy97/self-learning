@@ -1,15 +1,11 @@
 
 import React from 'react';
-import {
-  SafeAreaView,
-  
-} from 'react-native';
+import RootApp from "./src/navigation/Index";
 
 const App = () => {
   
   return (
-    <SafeAreaView>
-    </SafeAreaView>
+    <RootApp />
   );
 };
 
