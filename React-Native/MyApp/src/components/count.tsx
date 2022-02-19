@@ -1,13 +1,16 @@
 import React from 'react';
 import {View, Text, Button, SafeAreaView} from 'react-native';
 
-export default function () {
+type CountProps = {
+  count: number;
+  increaseCount: () => void;
+  decreaseCount: () => void;
+};
+
+export default function ({count, increaseCount, decreaseCount}: CountProps) {
   return (
     <SafeAreaView>
-      <Button
-        title="Increment"
-        //   onPress={() => actions.increment(1)}
-      ></Button>
+      <Button title="Increment" onPress={() => increaseCount()}></Button>
 
       <View>
         <Text
@@ -17,14 +20,11 @@ export default function () {
             padding: 8,
             textAlign: 'center',
           }}>
-          1{/* {state.counter.toString()} */}
+          {count}
         </Text>
       </View>
 
-      <Button
-        title="Decrement"
-        //   onPress={() => actions.decrement(1)}
-      ></Button>
+      <Button title="Decrement" onPress={() => decreaseCount()}></Button>
     </SafeAreaView>
   );
 }
