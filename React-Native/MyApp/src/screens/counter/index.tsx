@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {View} from 'react-native';
 import Count from '../../components/count';
 import {decreaseCountAction, increaseCountAction} from '../../redux-store/actions/counter';
 import {useSelector, useDispatch} from 'react-redux';
+import HelloUser from '../../components/HelloUser';
 
 const CounterScreen = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,11 @@ const CounterScreen = () => {
     dispatch(decreaseCountAction(3));
   };
 
+  // useMemo to solve refrence and if you want to rerender and re-evaluate add dependancy at []
+  const data =useMemo(()=>{
+    return {name:''}
+  },[])
+
   return (
     <View style={{flex: 1}}>
       <Count
@@ -29,6 +35,7 @@ const CounterScreen = () => {
         increaseCount={handleIncrease}
         decreaseCount={handleDecrease}
       />
+      <HelloUser name="ahmed" data={data}/>
     </View>
   );
 };

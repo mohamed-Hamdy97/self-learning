@@ -7,7 +7,7 @@ type CountProps = {
   decreaseCount: () => void;
 };
 
-export default function ({count, increaseCount, decreaseCount}: CountProps) {
+const Count =({count, increaseCount, decreaseCount}: CountProps)=> {
   return (
     <SafeAreaView>
       <Button title="Increment" onPress={() => increaseCount()}></Button>
@@ -28,3 +28,5 @@ export default function ({count, increaseCount, decreaseCount}: CountProps) {
     </SafeAreaView>
   );
 }
+
+export default Count
