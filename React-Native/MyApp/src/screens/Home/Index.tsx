@@ -4,6 +4,8 @@ import {Button, SafeAreaView, StyleSheet, View} from 'react-native';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  console.log('home screen');
+  
   return (
     <SafeAreaView style={styles.container}>
       <Button
