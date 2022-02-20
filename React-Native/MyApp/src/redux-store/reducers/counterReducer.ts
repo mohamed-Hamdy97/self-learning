@@ -1,8 +1,8 @@
-const initState = {count: 0};
+const initState = {count: 1};
 
 export default function counterReducer(
   state = initState,
-  action: {type: 'increment' | 'decrement'},
+  action: {type: 'increment' | 'decrement'; payload: number},
 ) {
   console.log('ssssss', action);
 
@@ -10,12 +10,12 @@ export default function counterReducer(
     case 'increment':
       return {
         ...state,
-        count: state.count + 1,
+        count: state.count + action.payload,
       };
     case 'decrement':
       return {
         ...state,
-        count: state.count + 1,
+        count: state.count - action.payload,
       };
     default:
       return state;

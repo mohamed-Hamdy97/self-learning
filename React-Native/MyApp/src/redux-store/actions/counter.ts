@@ -1,7 +1,13 @@
+export const increaseCountAction = (value: number) => {
+  return {
+    type: 'increment',
+    payload: value,
+  };
+};
 
-
-export const increaseCountAction = (dispatch:any)=>{
-   return {
-       type:'increment'
-   }
-}
+export const decreaseCountAction = (value: number) => {
+  return {
+    type: 'decrement',
+    payload: value,
+  };
+};
