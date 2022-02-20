@@ -1,7 +1,10 @@
-import React, { useMemo } from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {View} from 'react-native';
 import Count from '../../components/count';
-import {decreaseCountAction, increaseCountAction} from '../../redux-store/actions/counter';
+import {
+  decreaseCountAction,
+  increaseCountAction,
+} from '../../redux-store/actions/counter';
 import {useSelector, useDispatch} from 'react-redux';
 import HelloUser from '../../components/HelloUser';
 
@@ -24,10 +27,14 @@ const CounterScreen = () => {
   };
 
   // useMemo to solve refrence and if you want to rerender and re-evaluate add dependancy at []
-  const data =useMemo(()=>{
-    return {name:''}
-  },[])
+  const data = useMemo(() => {
+    return {name: ''};
+  }, []);
 
+  //useCallback for not returned functions
+  const addAge = useCallback(() => {
+    console.log('hi ');
+  }, []);
   return (
     <View style={{flex: 1}}>
       <Count
@@ -35,7 +42,7 @@ const CounterScreen = () => {
         increaseCount={handleIncrease}
         decreaseCount={handleDecrease}
       />
-      <HelloUser name="ahmed" data={data}/>
+      <HelloUser name="ahmed" data={data} addAge={addAge} />
     </View>
   );
 };
