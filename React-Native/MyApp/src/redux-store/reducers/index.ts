@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
-import counterReducer from './counterReducer';
+import authSlice from './authSlice';
+import counterSlice from './counterReducer';
 
 export default combineReducers({
-  counter: counterReducer,
+  counter: counterSlice,
+  auth: authSlice,
 });
